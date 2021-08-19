@@ -1,0 +1,27 @@
+<%-include("partials/header") -%>
+<header>
+    <h1 class="heading" href="/">MINITTER</h1>
+    <div class="navbar">
+        <a class="btn home" href="/tweet">Home</a>
+  </div>
+</header>
+    <div class="twit">
+          <% if(items.length>0){ %>
+            <% for(let i=0;i<items.length;i++) { %>
+                <div class="element">
+                <div class="title"><h2><%=items[i].heading%></h2></div>
+                <div class="content"><%=items[i].content%></div>
+                <form action="/yourpost" class="ab<%=i%>" method="POST">
+               
+                <input type="text" name="id" value="<%=items[i]._id%>" style="display:none" />
+                <div class="name" onClick="document.querySelector('.twit .element form.ab<%=i%>').submit()"
+                ><a>Delete</a></div>
+                </form>
+                </div>
+          <%  } %>
+            
+          <%  } %>
+    
+    <a class="btn plus" href="\input">+</a>  
+    </div>
+<%-include("partials/footer")-%>

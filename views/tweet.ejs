@@ -1,0 +1,28 @@
+<%-include("partials/header") -%>
+<header>
+    <h1 class="heading" href="/">MINITTER</h1>
+    <div class="navbar">
+          <a class="btn home" href="/yourpost">My Post</a>
+    </div>
+</header>
+<div class="body">
+<div class="twit">
+ 
+   
+   
+      <% if(items.length>0){ %>
+        <% items.forEach(function(element){ %>
+            <div class="element">
+            <div class="title"><h2><%=element.heading%></h2></div>
+            <div class="content"><%=element.content%></div>
+            <div class="name">By <%=element.name%></div>
+            </div>
+      <%  }) %>
+        
+      <%  } %>
+
+    
+</div>
+
+</div>
+<%-include("partials/footer")-%>

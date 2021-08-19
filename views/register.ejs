@@ -1,0 +1,22 @@
+<%-include("partials/header") -%>
+<header>
+    <h1 class="heading">MINITTER</h1>
+</header>
+<div class="container">
+    <p style="color: red;"><%=message%></p>
+    <form action="/register" method="POST">
+        <input type="text" placeholder="Name" name="username" /><br>
+        <input type="password" placeholder="Password" name="password" />
+        <button class="btn">Register</button>
+
+    </form>
+</div>
+<script>
+    document.querySelector("input").addEventListener("click",handle);
+    function handle(){
+        document.querySelector(".container p").innerHTML="";
+    }
+</script>
+
+
+<%-include("partials/footer")-%>

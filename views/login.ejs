@@ -1,0 +1,16 @@
+<%-include("partials/header") -%>
+    <div class="login">
+        <header>
+            <h1 class="heading">MINITTER</h1>
+        </header>
+        <div class="container" >
+                <form action="/" method="POST">
+                    <input type="text" placeholder="Name" name="username"  autofocus="false"  /> <br>
+                    <input type="password" placeholder="password" name="password" autofocus="false" /> <br>
+                    <button class="btn">Login</button>
+                </form>
+                <p class="message">Didn't have account?Click <a class="rbtn" href="/register">here</a> to Register!</p>
+            
+        </div>
+    </div>
+    <%-include("partials/footer")-%>

@@ -1,0 +1,13 @@
+<%-include("partials/header") -%>
+<header>
+    <h1 class="heading">MINITTER</h1>
+</header>
+<div class="input">
+    <form action="/input" method="POST">
+        <input class="heading_input" name="heading" type="text" placeholder="Heading" autofocus="false" /> <br>
+        <textarea rows="10" cols="30" name="content" placeholder="enter the content" class="content_input"></textarea><br>
+        <button type="submit" class="btn">Post</button>
+    </form>
+
+</div>
+<%-include("partials/footer")-%>
