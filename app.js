@@ -65,7 +65,7 @@ app.get('/tweet', function (req, res) {
        })
        
    }else{
-      res.redirect("/login");
+      res.redirect("/");
    }
 
 });
