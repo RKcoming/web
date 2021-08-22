@@ -4,6 +4,7 @@
             <h1 class="heading">MINITTER</h1>
         </header>
         <div class="container" >
+              <p style="color: red;"><%=mess%></p>
                 <form action="/" method="POST">
                     <input type="text" placeholder="Name" name="username"  autofocus="false"  /> <br>
                     <input type="password" placeholder="password" name="password" autofocus="false" /> <br>
@@ -13,4 +14,11 @@
             
         </div>
     </div>
+    <script>
+        document.querySelector("input").addEventListener("click",handle);
+        function handle(){
+            document.querySelector(".container p").innerHTML="";
+        }
+    </script>
+    
     <%-include("partials/footer")-%>
